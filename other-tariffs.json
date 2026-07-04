@@ -1,0 +1,84 @@
+{
+  "schema": 2,
+  "updated": "2026-07-04",
+  "note": "National-average electricity rates inc. VAT, direct debit. Regional rates vary several percent — replace with your region's figures from a quote for precision. Exit fees are notes only; they are not included in the cost maths. EDF and E.ON Next are not in this list because their tariffs are fetched live from their open Kraken APIs, like Octopus. closedToNew: case-insensitive regex sources matched against Kraken product codes for products still in the API but closed to new sign-ups.",
+  "closedToNew": [
+    "FLUX"
+  ],
+  "tariffs": [
+    {
+      "id": "bg-tracker",
+      "supplier": "British Gas",
+      "name": "Tracker (cap −£50/yr)",
+      "unitRate": 26.11,
+      "standingCharge": 50,
+      "offPeakRate": null,
+      "offPeakStart": null,
+      "offPeakEnd": null,
+      "notes": "Tracks the Ofgem cap quarterly; BG discounts standing charges so a dual-fuel bill sits £50/yr below the cap. Standing charge here is derived from that discount, not quoted — verify with a postcode quote. Exit fee historically £25/fuel",
+      "source": "https://www.britishgas.co.uk/energy.html",
+      "sourcedAt": "2026-07-04"
+    },
+    {
+      "id": "bg-fixed-sep27",
+      "supplier": "British Gas",
+      "name": "Fixed Tariff Sep27",
+      "unitRate": 26.1,
+      "standingCharge": 58,
+      "offPeakRate": null,
+      "offPeakStart": null,
+      "offPeakEnd": null,
+      "notes": "14-month fix. BG publishes no national average — these are midpoints of the regional ranges (23.17–29.08p/kWh, 45.63–70.94p/day), so verify with a postcode quote. Exit fee up to £100/fuel per aggregator listing",
+      "source": "https://www.energyplus.co.uk/suppliers/british-gas/tariffs/fixed-tariff-sep27-v1",
+      "sourcedAt": "2026-07-04"
+    },
+    {
+      "id": "so-green-tracker",
+      "supplier": "So Energy",
+      "name": "So Green Tracker",
+      "unitRate": 25.3,
+      "standingCharge": 57.19,
+      "offPeakRate": null,
+      "offPeakStart": null,
+      "offPeakEnd": null,
+      "notes": "12-month tracker re-based quarterly to sit £50/yr (£25/fuel) below the cap; unit rate derived from that discount. Smart meter required, £50/fuel exit fee",
+      "source": "https://www.so.energy/tariffs/so-green-tracker-tariff",
+      "sourcedAt": "2026-07-04"
+    },
+    {
+      "id": "sp-cap-tracker",
+      "supplier": "ScottishPower",
+      "name": "Cap Tracker",
+      "unitRate": 26.11,
+      "standingCharge": 55,
+      "offPeakRate": null,
+      "offPeakStart": null,
+      "offPeakEnd": null,
+      "notes": "Tracks the Ofgem cap with a small standing-charge discount (sources conflict on £7.50–£15/yr, standing charge shown is approximate); NO exit fees. Verify with a postcode quote",
+      "source": "https://www.scottishpower.co.uk/energy/cap-tracker",
+      "sourcedAt": "2026-07-04"
+    },
+    {
+      "id": "svt-price-cap",
+      "supplier": "Any supplier (SVT at price cap)",
+      "name": "Standard Variable @ Ofgem cap (1 July to 30 September 2026)",
+      "unitRate": 26.11,
+      "standingCharge": 57.19,
+      "offPeakRate": null,
+      "offPeakStart": null,
+      "offPeakEnd": null,
+      "notes": "National-average cap level; regional rates vary a few percent",
+      "source": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-unit-rates-and-standing-charges",
+      "sourcedAt": "2026-07-04"
+    }
+  ],
+  "removed": [
+    "edf-essentials-plus-12m",
+    "edf-no-standing-charge-v1",
+    "eon-next-fixed-v53",
+    "svt-price-cap-next",
+    "bg-fixed-jun27",
+    "bg-longer-fix-may28",
+    "bg-cap-tracker-jun27"
+  ]
+}
