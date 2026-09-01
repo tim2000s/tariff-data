@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-07-04",
+  "updated": "2026-09-01",
   "note": "National-average electricity rates inc. VAT, direct debit. Regional rates vary several percent — replace with your region's figures from a quote for precision. Exit fees are notes only; they are not included in the cost maths. EDF and E.ON Next are not in this list because their tariffs are fetched live from their open Kraken APIs, like Octopus. closedToNew: case-insensitive regex sources matched against Kraken product codes for products still in the API but closed to new sign-ups.",
   "closedToNew": [
     "FLUX"
@@ -17,19 +17,6 @@
       "offPeakEnd": null,
       "notes": "Tracks the Ofgem cap quarterly; BG discounts standing charges so a dual-fuel bill sits £50/yr below the cap. Standing charge here is derived from that discount, not quoted — verify with a postcode quote. Exit fee historically £25/fuel",
       "source": "https://www.britishgas.co.uk/energy.html",
-      "sourcedAt": "2026-07-04"
-    },
-    {
-      "id": "bg-fixed-sep27",
-      "supplier": "British Gas",
-      "name": "Fixed Tariff Sep27",
-      "unitRate": 26.1,
-      "standingCharge": 58,
-      "offPeakRate": null,
-      "offPeakStart": null,
-      "offPeakEnd": null,
-      "notes": "14-month fix. BG publishes no national average — these are midpoints of the regional ranges (23.17–29.08p/kWh, 45.63–70.94p/day), so verify with a postcode quote. Exit fee up to £100/fuel per aggregator listing",
-      "source": "https://www.energyplus.co.uk/suppliers/british-gas/tariffs/fixed-tariff-sep27-v1",
       "sourcedAt": "2026-07-04"
     },
     {
@@ -54,9 +41,9 @@
       "offPeakRate": null,
       "offPeakStart": null,
       "offPeakEnd": null,
-      "notes": "Tracks the Ofgem cap with a small standing-charge discount (sources conflict on £7.50–£15/yr, standing charge shown is approximate); NO exit fees. Verify with a postcode quote",
-      "source": "https://www.scottishpower.co.uk/energy/cap-tracker",
-      "sourcedAt": "2026-07-04"
+      "notes": "Tracks the Ofgem cap; standing charge set £7.50/fuel/yr (≈£15/yr dual-fuel) below the cap's standing charge — confirmed by ScottishPower's own price-cap page, resolving the earlier £7.50–£15 source conflict. NO exit fees. Verify with a postcode quote",
+      "source": "https://www.scottishpower.co.uk/support-centre/price-cap",
+      "sourcedAt": "2026-09-01"
     },
     {
       "id": "svt-price-cap",
@@ -70,15 +57,28 @@
       "notes": "National-average cap level; regional rates vary a few percent",
       "source": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-unit-rates-and-standing-charges",
       "sourcedAt": "2026-07-04"
+    },
+    {
+      "id": "svt-price-cap-next",
+      "supplier": "Any supplier (SVT at price cap)",
+      "name": "Standard Variable @ Ofgem cap (1 October to 31 December 2026)",
+      "unitRate": 26.32,
+      "standingCharge": 54.83,
+      "offPeakRate": null,
+      "offPeakStart": null,
+      "offPeakEnd": null,
+      "notes": "Announced by Ofgem 26 Aug 2026 (4% rise on the prior quarter, ~£1,723/yr typical dual-fuel bill). Includes the temporary cut of VAT on domestic electricity from 5% to 0%, in effect 1 Oct 2026–31 Mar 2027 — the published cap rate is, as always, the actual VAT-inclusive amount payable, so no separate VAT adjustment is needed here. Sourced via WebSearch corroboration (Ofgem's own press release plus Uswitch, MoneySavingExpert/Martin Lewis, Bloomberg, E.ON Next all quoting identical figures) because this environment's network egress has blocked direct fetches to ofgem.gov.uk for three consecutive monthly reviews (Jul/Aug/Sep 2026) — verify against the Ofgem page directly once fetch access is restored",
+      "source": "https://www.ofgem.gov.uk/news/changes-energy-price-cap-between-1-october-and-31-december-2026",
+      "sourcedAt": "2026-09-01"
     }
   ],
   "removed": [
     "edf-essentials-plus-12m",
     "edf-no-standing-charge-v1",
     "eon-next-fixed-v53",
-    "svt-price-cap-next",
     "bg-fixed-jun27",
     "bg-longer-fix-may28",
-    "bg-cap-tracker-jun27"
+    "bg-cap-tracker-jun27",
+    "bg-fixed-sep27"
   ]
 }
