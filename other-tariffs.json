@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-09-01",
+  "updated": "2026-10-01",
   "note": "National-average electricity rates inc. VAT, direct debit. Regional rates vary several percent — replace with your region's figures from a quote for precision. Exit fees are notes only; they are not included in the cost maths. EDF and E.ON Next are not in this list because their tariffs are fetched live from their open Kraken APIs, like Octopus. closedToNew: case-insensitive regex sources matched against Kraken product codes for products still in the API but closed to new sign-ups.",
   "closedToNew": [
     "FLUX"
@@ -48,28 +48,15 @@
     {
       "id": "svt-price-cap",
       "supplier": "Any supplier (SVT at price cap)",
-      "name": "Standard Variable @ Ofgem cap (1 July to 30 September 2026)",
-      "unitRate": 26.11,
-      "standingCharge": 57.19,
-      "offPeakRate": null,
-      "offPeakStart": null,
-      "offPeakEnd": null,
-      "notes": "National-average cap level; regional rates vary a few percent",
-      "source": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-unit-rates-and-standing-charges",
-      "sourcedAt": "2026-07-04"
-    },
-    {
-      "id": "svt-price-cap-next",
-      "supplier": "Any supplier (SVT at price cap)",
       "name": "Standard Variable @ Ofgem cap (1 October to 31 December 2026)",
       "unitRate": 26.32,
       "standingCharge": 54.83,
       "offPeakRate": null,
       "offPeakStart": null,
       "offPeakEnd": null,
-      "notes": "Announced by Ofgem 26 Aug 2026 (4% rise on the prior quarter, ~£1,723/yr typical dual-fuel bill). Includes the temporary cut of VAT on domestic electricity from 5% to 0%, in effect 1 Oct 2026–31 Mar 2027 — the published cap rate is, as always, the actual VAT-inclusive amount payable, so no separate VAT adjustment is needed here. Sourced via WebSearch corroboration (Ofgem's own press release plus Uswitch, MoneySavingExpert/Martin Lewis, Bloomberg, E.ON Next all quoting identical figures) because this environment's network egress has blocked direct fetches to ofgem.gov.uk for three consecutive monthly reviews (Jul/Aug/Sep 2026) — verify against the Ofgem page directly once fetch access is restored",
+      "notes": "National-average cap level; regional rates vary a few percent. Includes the temporary cut of VAT on domestic electricity from 5% to 0%, in effect 1 Oct 2026–31 Mar 2027 — the published cap rate is, as always, the actual VAT-inclusive amount payable. Promoted from svt-price-cap-next on 2026-10-01 (quarter rollover; the expired Jul–Sep entry has been dropped). Re-verified unchanged via WebSearch because this environment's network egress still blocks a direct ofgem.gov.uk fetch (4th consecutive month) — Ofgem's own price-cap page, EnergyPlus's price-cap tracker, and MoneySavingExpert all independently quote the identical 26.32p/54.83p figures announced 26 Aug 2026 — verify against the Ofgem page directly once fetch access is restored",
       "source": "https://www.ofgem.gov.uk/news/changes-energy-price-cap-between-1-october-and-31-december-2026",
-      "sourcedAt": "2026-09-01"
+      "sourcedAt": "2026-10-01"
     }
   ],
   "removed": [
@@ -79,6 +66,7 @@
     "bg-fixed-jun27",
     "bg-longer-fix-may28",
     "bg-cap-tracker-jun27",
-    "bg-fixed-sep27"
+    "bg-fixed-sep27",
+    "svt-price-cap-next"
   ]
 }
